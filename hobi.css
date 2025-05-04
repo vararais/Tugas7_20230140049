@@ -1,0 +1,133 @@
+/* CSS untuk Halaman Hobi - style-hobi.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Orbitron:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    background-image: 
+        linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(102, 0, 255, 0.1) 0%, transparent 50%);
+}
+
+header {
+    background: linear-gradient(to right, #333399, #00cc99);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 204, 153, 0.3);
+}
+
+section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00cc99;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hobby-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.hobby-card {
+    background: linear-gradient(135deg, rgba(25, 25, 25, 0.9), rgba(40, 40, 40, 0.9));
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0, 204, 153, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #00cc99, #333399);
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 204, 153, 0.3);
+}
+
+.hobby-card h3 {
+    color: #00cc99;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+footer {
+    background: linear-gradient(to right, #333399, #00cc99);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .hobby-container {
+        grid-template-columns: 1fr;
+    }
+}

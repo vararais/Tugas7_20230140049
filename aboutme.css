@@ -1,0 +1,151 @@
+/* CSS untuk Halaman Tentang Saya - style-aboutme.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Orbitron:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom right, 
+                    rgba(255, 0, 130, 0.1), 
+                    rgba(0, 0, 0, 0), 
+                    rgba(102, 0, 255, 0.1));
+}
+
+header {
+    background: linear-gradient(to right, #ff00cc, #333399);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #21f3d6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.3);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 3px solid #ff00cc;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+}
+
+.bio-info {
+    width: 100%;
+    max-width: 700px;
+}
+
+.bio-info h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #21f3d6;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.bio-info h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 50%;
+    background: linear-gradient(to right, #ff00cc, #21f3d6);
+}
+
+.about-content {
+    padding: 1rem;
+    background-color: rgba(18, 18, 18, 0.5);
+    border-radius: 8px;
+    border-left: 3px solid #ff00cc;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+.bio-info h3 {
+    color: #ff00cc;
+    margin: 1.5rem 0 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+.bio-info ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.bio-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background: linear-gradient(to right, #ff00cc, #333399);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+}
